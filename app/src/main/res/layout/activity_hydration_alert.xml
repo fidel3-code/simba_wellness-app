@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F4F6F7"
-    tools:context=".Meditation">
+    tools:context=".HydrationAlert">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,7 +17,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Meditation"
+            android:text="Hydration Alert"
             android:textSize="26sp"
             android:textStyle="bold"
             android:textColor="#2E7D32"
@@ -28,7 +28,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:src="@drawable/img"
+            android:src="@drawable/water"
             android:scaleType="centerCrop"
             android:layout_marginBottom="16dp"/>
 
@@ -44,17 +44,17 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Meditation is a powerful practice for enhancing mental clarity and emotional stability.\n\nBy focusing on the present moment and observing thoughts without judgment, it helps lower cortisol levels and significantly reduces chronic stress.\n\nRegular meditation has been shown to improve attention span, boost memory, and foster a greater sense of empathy and self-awareness.\n\nIncorporating just ten minutes of mindfulness into your daily routine can lead to long-term improvements in sleep quality and overall psychological resilience."
+                android:text="Hydration is critical for maintaining physical health and peak performance.\n\nWater acts as a natural lubricant for your joints and helps regulate body temperature during exercise through sweat.\n\nEven mild dehydration can lead to fatigue, headaches, and decreased motivation, making workouts feel significantly harder.\n\nTo stay properly hydrated, it is recommended to drink water consistently throughout the day, not just when you feel thirsty."
                 android:textSize="18sp"
                 android:lineSpacingExtra="5dp"/>
         </LinearLayout>
 
         <!-- Button -->
         <Button
-            android:id="@+id/btnStartMeditation"
+            android:id="@+id/btnHydrate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Start Meditation"
+            android:text="Remind Me to Drink Water"
             android:backgroundTint="#4CAF50"
             android:textColor="#FFFFFF"/>
 

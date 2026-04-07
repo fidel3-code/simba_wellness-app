@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F6F7"
+    tools:context=".StartExercise">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Exercise"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#2E7D32"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Image 1 -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/image3"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Introduction Text -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:elevation="4dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Physical fitness is essential for health because it significantly reduces the risk of chronic diseases and improves mental well-being.\n\nRegular activity provides both immediate benefits, like improved mood and sleep, and long-term protection against leading causes of death, including heart disease and certain cancers."
+                android:textSize="18sp"
+                android:lineSpacingExtra="5dp"/>
+        </LinearLayout>
+
+        <!-- Image 2 -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/morningrun"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Benefits Text -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:elevation="4dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Key Benefits of Physical Fitness:\n\n• Disease Prevention and Management: Reduces the risk of type 2 diabetes, stroke, high blood pressure, and metabolic syndrome. Helps manage existing conditions like arthritis.\n\n• Mental Health Boost: Stimulates brain chemicals like endorphins and serotonin, alleviating depression, anxiety, and stress.\n\n• Physical Strength and Mobility: Strengthens bones and muscles, preventing falls and injuries.\n\n• Weight Control: Maintains healthy weight and prevents obesity-related complications.\n\n• Brain Health: Enhances memory, attention, and may lower dementia risk.\n\nRecommended Activity Levels:\n\n• Aerobic Activity: 150–300 minutes moderate-intensity or 75–150 minutes vigorous-intensity per week.\n• Muscle Strengthening: All major muscle groups at least 2 days per week.\n\nWould you like a sample weekly schedule that balances these aerobic and strength-training recommendations?"
+                android:textSize="18sp"
+                android:lineSpacingExtra="5dp"/>
+        </LinearLayout>
+
+        <!-- Button -->
+        <Button
+            android:id="@+id/btnWeeklySchedule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show Weekly Schedule"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"/>
+
+    </LinearLayout>
+</ScrollView>
