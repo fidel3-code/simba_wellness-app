@@ -7,12 +7,52 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.LoadAdError
+import com.google.android.gms.ads.interstitial.InterstitialAd
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 
 class MainActivity : AppCompatActivity() {
+
+//    A variable to store our interstitial ad
+
+    private var mInterstitialAd: InterstitialAd?= null
+
+
+
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+
+
+//starts the Google AdMob SDK
+//prepares your app to load ads
+// Must be called before showing ads
+        MobileAds.initialize(this)
+
+//Get the Adview from layout   Connects your Kotlin code to the ad view in XML   R.id.adView=the banner ad you placed in your layout
+        val adView = findViewById<AdView>(R.id.adView)
+
+//Creates a request asking AdMob for an ad  You can customize it
+        val adRequest = AdRequest.Builder().build()
+
+//Load the ad  Sends request to admob
+        adView.loadAd(adRequest)
+
+//        call the function to load the ad from the server
+
+        loadInterstitialAd()
+
+
+
+
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -31,6 +71,9 @@ class MainActivity : AppCompatActivity() {
 
             val recipeIntent= Intent(applicationContext, HealthyRecipes::class.java)
             startActivity(recipeIntent)
+
+//            show your interstitial ad here
+            showInterstitialAd()
         }
 
 //        nutrition intent
@@ -96,5 +139,31 @@ class MainActivity : AppCompatActivity() {
 
 
 
+    }
+
+    fun loadInterstitialAd() {
+        val adRequest = AdRequest.Builder().build()
+
+        InterstitialAd.load(
+            this,
+            "ca-app-pub-3940256099942544/1033173712", // Test ID
+            adRequest,
+            object : InterstitialAdLoadCallback() {
+
+                override fun onAdLoaded(ad: InterstitialAd) {
+                    mInterstitialAd = ad
+                }
+
+                override fun onAdFailedToLoad(error: LoadAdError) {
+                    mInterstitialAd = null
+                }
+            }
+        )
+    }
+    //Show Interstitial ad
+    fun showInterstitialAd() {
+        if (mInterstitialAd != null) {
+            mInterstitialAd?.show(this)
+        }
     }
 }
