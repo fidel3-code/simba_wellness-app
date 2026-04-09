@@ -24,7 +24,7 @@
             android:name=".HydrationAlert"
             android:exported="false" />
         <activity
-            android:name=".MainActivity2"
+            android:name=".WeeklyGoals"
             android:exported="false" />
         <activity
             android:name=".Meditation"

@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="#F4F6F7"
+    android:id="@+id/main"
     tools:context=".HydrationAlert">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+
 
         <!-- Title -->
         <TextView
@@ -32,14 +30,7 @@
             android:scaleType="centerCrop"
             android:layout_marginBottom="16dp"/>
 
-        <!-- Content Box -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#FFFFFF"
-            android:padding="16dp"
-            android:elevation="4dp"
-            android:layout_marginBottom="16dp">
+
 
             <TextView
                 android:layout_width="match_parent"
@@ -47,7 +38,7 @@
                 android:text="Hydration is critical for maintaining physical health and peak performance.\n\nWater acts as a natural lubricant for your joints and helps regulate body temperature during exercise through sweat.\n\nEven mild dehydration can lead to fatigue, headaches, and decreased motivation, making workouts feel significantly harder.\n\nTo stay properly hydrated, it is recommended to drink water consistently throughout the day, not just when you feel thirsty."
                 android:textSize="18sp"
                 android:lineSpacingExtra="5dp"/>
-        </LinearLayout>
+
 
         <!-- Button -->
         <Button
@@ -58,5 +49,5 @@
             android:backgroundTint="#4CAF50"
             android:textColor="#FFFFFF"/>
 
-    </LinearLayout>
-</ScrollView>
+
+</LinearLayout>
